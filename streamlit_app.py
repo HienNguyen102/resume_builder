@@ -175,7 +175,7 @@ st.subheader('Daily routine as Data Scientist')
 st.graphviz_chart(graph)
 
 st.sidebar.caption('Wish to connect?')
-st.sidebar.write('📧: mehulgupta2016154@gmail.com')
+st.sidebar.write('📧: nguyenconghien0102@gmail.com')
 
 pdfFileObj = open('pdfs/mehul_gupta_resume.pdf', 'rb')
 st.sidebar.download_button('download resume',pdfFileObj,file_name='mehul_gupta_resume.pdf',mime='pdf')

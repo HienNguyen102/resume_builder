@@ -164,18 +164,18 @@ with st.expander('read my latest blogs below'):
 st.subheader('Youtube ▶️')
 st.markdown("""<a href={}> access channel here</a>""".format(info['youtube_url']),unsafe_allow_html=True)
 page1,page2 = requests.get(info['youtube_url']), requests.get(info['youtube_about'])
-subs = re.findall('(\d+\.\d+[kK]?) subscribers',page1.text)[0]
-videos = re.findall( r'"videosCountText".*?"text":"(\d+)"',page1.text)[0]
+#subs = re.findall('(\d+\.\d+[kK]?) subscribers',page1.text)[0]
+#videos = re.findall( r'"videosCountText".*?"text":"(\d+)"',page1.text)[0]
 
 cols = st.columns(2)
-cols[0].metric('Subscribers',subs)
-cols[1].metric('Videos',videos)
+#cols[0].metric('Subscribers',subs)
+#cols[1].metric('Videos',videos)
         
 st.subheader('Daily routine as Data Scientist')
 st.graphviz_chart(graph)
 
 st.sidebar.caption('Wish to connect?')
-st.sidebar.write('📧: mehulgupta2016154@gmail.com')
+st.sidebar.write('📧: nguyenconghien0102@gmail.com')
 
 pdfFileObj = open('pdfs/mehul_gupta_resume.pdf', 'rb')
 st.sidebar.download_button('download resume',pdfFileObj,file_name='mehul_gupta_resume.pdf',mime='pdf')
